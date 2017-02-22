@@ -1,3 +1,4 @@
+var loaderUtils = require("loader-utils")
 var defaultOptions = require("./defaultOptions");
 var path = require("path");
 var parser = require("./internal/parser");
@@ -152,7 +153,7 @@ function mapDependency(module, options, dep){
                 break;
             case 'dojo/text':
                 // use webpack raw-loader instead of dojo/text
-                result_loaders.push("raw");
+                result_loaders.push("raw-loader");
                 break;
             case 'dojo/i18n':
                 // Will be loaded via DojoWebpackLoader
@@ -208,7 +209,7 @@ function DojoWebpackLoader(content){
     // console.log(this.resourcePath);
 
     // Prepare options
-    var dojoWebpackLoaderOptions = this.options.dojoWebpackLoader;
+    var dojoWebpackLoaderOptions = loaderUtils.getOptions(this);
     var options = Object.assign({}, defaultOptions, dojoWebpackLoaderOptions);
     options.staticHasFeatures = Object.assign({}, defaultOptions.staticHasFeatures, dojoWebpackLoaderOptions.staticHasFeatures);
 

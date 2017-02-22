@@ -1,5 +1,4 @@
 module.exports = {
-
     // Absolute paths to dojo modules
     dojoCorePath: null,     // necessary
     dojoDijitPath: null,    // optional - if dijit Widgets are used
@@ -48,6 +47,5 @@ module.exports = {
     selectorEngine: 'lite',
 
     // Languages for dojo/nls module which will be in result pack.
-    includeLanguages: []
-
+    includeLanguages: [],
 };

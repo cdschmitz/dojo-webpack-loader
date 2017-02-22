@@ -14,12 +14,12 @@
   ],
   "author": "Nordth",
   "license": "MIT",
-  "repository" :
-  { 
-    "type" : "git", 
-    "url" : "https://github.com/Nordth/dojo-webpack-loader.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nordth/dojo-webpack-loader.git"
   },
   "dependencies": {
+    "loader-utils": "^1.0.2",
     "raw-loader": "^0.5.1"
   },
   "bugs": {
